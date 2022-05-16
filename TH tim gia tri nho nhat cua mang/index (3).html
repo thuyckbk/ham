@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-eqhiv="X-UA_Compartible" content="IE=egde">
+	<meta name="viewport" content="width=device, initial-scale=1.0">
+	<title> Thuc hanh tim gia tri nho nhat cua mang </title>
+</head>
+<body>
+
+
+<script>
+	function minArray(arr) {
+    if(arr.length == 0)
+        return -1;
+    let min = arr[0];
+    let a = 0;
+
+    for(let i = 1; i < arr.length; i++){
+        if(arr[i] < min){
+            min = arr[i];
+            a=i;
+        }
+    }
+    return a;
+	}
+	let arr2 = [];
+	if (minArray(arr2)==-1){
+	alert(minArray(arr2)+ ' Mang cua ban la mang rong')
+	}else{
+	alert('Gia tri nho nhat cua mang la: '+arr2[minArray(arr2)]+ ' tai vi tri '+minArray(arr2));
+}
+</script>
+</body>
+</html>

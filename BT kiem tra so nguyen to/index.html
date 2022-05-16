@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <h1> Length unit Converter </h1>
+        <h3> Type a value in the Meters field to convert the value to Foot: </h3>
+            <label>Meters &nbsp</label>
+            <input id="inputMeters" type="number" placeholder="Meters"
+                   oninput="footConverter(this.value)"
+                   onchange="footConverter(this.value)"><span id="display"></span>
+    </form>
+    
+    <script>
+    
+        function footConverter(valNum) {
+            valNum = parseFloat(valNum);
+            document.getElementById("inputFoot").value = valNum*3.279;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-eqhiv="X-UA_Compartible" content="IE=egde">
+	<meta name="viewport" content="width=device, initial-scale=1.0">
+	<title> Bai tap chuyen doi giua meters va feet </title>
+</head>
+<body>
+
+<form>
+    <h1> Length unit Converter </h1>
+    <h3> Type a value in the Meters field to convert the value to Foot: </h3>
+        <label>Meters &nbsp</label>
+        <input id="inputMeters" type="number" placeholder="Meters"
+               oninput="footConverter(this.value)"
+               onchange="footConverter(this.value)"><span> m &nbsp <-> &nbsp</span>
+    <input id="inputFoot" type="number" placeholder="Foot"
+               oninput="metersConverter(this.value)"
+               onchange="metersConverter(this.value)"> foot
+    
+</form>
+
+<script>
+
+    function footConverter(valNum) {
+        valNum = parseFloat(valNum);
+        document.getElementById("inputFoot").value = valNum*3.279;
+    }
+    function metersConverter(valNum) {
+        valNum = parseFloat(valNum);
+        document.getElementById("inputMeters").value = valNum*0.305;
+    }
+
+</script>
+</body>
+</html>
